@@ -19,6 +19,9 @@ LOCAL_PATH := device/xiaomi/chopin
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
+
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -65,11 +68,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock
 
-# Heath hal
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-service \
-    android.hardware.health@2.1-impl
- 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -85,5 +83,5 @@ TW_INCLUDE_NTFS_3G := true
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TARGET_USES_MKE2FS := true
-TW_DEVICE_VERSION := POCO X3 GT BY DONSENPAI05
+TW_DEVICE_VERSION := POCO X3 GT BY MASTERSENPAI05
 TW_NO_SCREEN_BLANK := true
