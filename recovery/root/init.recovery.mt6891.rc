@@ -5,7 +5,7 @@ import /tee-supplicant.rc
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
 
-on fs
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
 on post-fs
@@ -102,6 +102,12 @@ on property:ro.crypto.state=unencrypted
 
 on property:twrp.decrypt.done=true
     stop teei_daemon  
+    stop keymaster-4-0-beanpod
+    stop keymaster-4-0-mitee
+    stop gatekeeper-1-0
+
+on property:twrp.all.user.decrypted=true
+    stop teei_daemon
     stop keymaster-4-0-beanpod
     stop keymaster-4-0-mitee
     stop gatekeeper-1-0
