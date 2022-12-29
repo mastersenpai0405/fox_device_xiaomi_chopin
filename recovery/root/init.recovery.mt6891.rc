@@ -69,10 +69,10 @@ on property:hwservicemanager.ready=true && property:ro.boot.tee_type=2
     stop keymaster-4-0-mitee
     start keymaster-4-0-beanpod
 
-on property:vendor.sys.listener.registered=true && property:ro.booy.tee_type=2
+on property:vendor.sys.listener.registered=true && property:ro.boot.tee_type=2
     start keymaster-4-0-beanpod
     
-on property:vendor.sys.listener.registered=true && property:ro.booy.tee_type=1
+on property:vendor.sys.listener.registered=true && property:ro.boot.tee_type=1
     start keymaster-4-0-mitee
 
 on property:ro.crypto.state=unsupported
